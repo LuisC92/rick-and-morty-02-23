@@ -1,7 +1,7 @@
 import React from "react";
 
 const CharacterCard = ({ character }) => {
-  console.log("props from Card:", character);
+//   console.log("props from Card:", character);
 
   return (
     character ? (
