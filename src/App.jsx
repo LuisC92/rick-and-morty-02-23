@@ -7,14 +7,14 @@ import "./App.css";
 
 function App() {
   const [characters, setCharacters] = useState();
-  
+
   //! set the function to be called when the button is clicked
   const fetchCharacters = () => {
     axios
-    .get("https://rickandmortyapi.com/api/character")
-    .then((response) => setCharacters(response.data.results));
+      .get("https://rickandmortyapi.com/api/character")
+      .then((response) => setCharacters(response.data.results));
   };
-  
+
   return (
     <div>
       <h1>Rick & Morty</h1>
@@ -28,7 +28,7 @@ function App() {
             </div>
           ))
         : null}
-        {/* Another way of doing the ternary op (not recommended) */}
+      {/* Another way of doing the ternary op (not recommended) */}
       {/* { characters && characters.map((character) => (
         <CharacterCard character={character} />
       ))} */}
@@ -37,4 +37,3 @@ function App() {
 }
 
 export default App;
-
