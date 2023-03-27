@@ -6,8 +6,8 @@ const CharacterCard = ({ character }) => {
   return (
     character ? (
       <div>
-        <h2>Name: {character.name}</h2>
         <img src={character.image} alt={character.name} />
+        <h3>Name: {character.name}</h3>
         <p>Status: {character.status}</p>
         <p>Species: {character.species}</p>
         <p>Gender: {character.gender}</p>
