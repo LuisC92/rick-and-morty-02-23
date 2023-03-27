@@ -3,14 +3,17 @@ import React from "react";
 const CharacterCard = ({ character }) => {
 //   console.log("props from Card:", character);
 
+const {id, image, name, status, species} = character
+
   return (
     character ? (
-      <div>
-        <img src={character.image} alt={character.name} />
-        <h3>Name: {character.name}</h3>
-        <p>Status: {character.status}</p>
-        <p>Species: {character.species}</p>
-        <p>Gender: {character.gender}</p>
+        <div className="card m-3">
+          <img className="card-img-top" src={image} alt={name} />
+          <div className="card-body">
+            <h5 className="card-title">Name: {name}</h5>
+            <p className="card-text">Status: {status}</p>
+            <p className="card-text">Species: {species}</p>
+          </div>
       </div>
     ) : null
   );

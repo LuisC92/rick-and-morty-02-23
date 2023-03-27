@@ -41,12 +41,14 @@ const CharacterList = () => {
 
   return (
     <div>
+      <br/>
       <h1>Characters List</h1>
       <SearchBar search={search} handleChange={handleChange} />
       {/* //* 1st step use the button to fetch data on Click */}
       {/* Click a button to display a list of characters.
       (handling events) */}
       {/* <button onClick={fetchCharacters}>Get Characters List</button> */}
+      <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 justify-content-center mt-5 mb-5">
       {characters
         // * render data inside cards using map() to iterate all elements fetched
         ? characters.map((character) => (
@@ -55,6 +57,7 @@ const CharacterList = () => {
             </div>
           ))
         : null}
+        </div>
       {/* Another way of doing the ternary op (not recommended) */}
       {/* { characters && characters.map((character) => (
         <CharacterCard character={character} />
