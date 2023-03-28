@@ -1,6 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import SearchBar from "../../components/SearchBar/SearchBar";
 
@@ -52,9 +53,12 @@ const CharacterList = () => {
       {characters
         // * render data inside cards using map() to iterate all elements fetched
         ? characters.map((character) => (
-            <div key={character.id}>
+          <Link to={`/characters/${character.id}`}>         
+             <div key={character.id}>
               <CharacterCard character={character} />
             </div>
+            </Link>
+
           ))
         : null}
         </div>

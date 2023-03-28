@@ -5,7 +5,7 @@ h1{
 
 .container-main{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content:center;
   text-align: center;
@@ -46,7 +46,7 @@ h1{
   color: #122620;
 }
 .card-body{
-  height: 150px;
+  height: 200px;
   background-color: #B68D40;
 }
 .navbar-nav a:link {
