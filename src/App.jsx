@@ -1,18 +1,23 @@
 import React from "react";
-import CharacterList from "./pages/CharacterList/CharacterList";
 
 import "./App.css";
 import NavBar from "./components/Navbar/NavBar";
+import Footer from "./components/Footer/Footer";
 import Main from "./pages/Main/Main";
+
+import { CharactersContextProvider } from "./contexts/CharactersContext";
 
 function App() {
   return (
     <>
-      <div className="container-main">
-        {/* <CharacterList /> */}
+      <CharactersContextProvider>
         <NavBar />
-        <Main />
-      </div>
+        <div className="container-main">
+          {/* <CharacterList /> */}
+          <Main />
+        </div>
+        <Footer />
+      </CharactersContextProvider>
     </>
   );
 }

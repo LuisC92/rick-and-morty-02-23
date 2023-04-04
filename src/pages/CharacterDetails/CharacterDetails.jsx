@@ -18,7 +18,7 @@ const CharacterDetails = () => {
     },[])
 
   return (
-    <div>
+    <div className='content-container'>
         {character ? (
               <div className="card m-3">
               <img className="card-img-top" src={character.image} alt={character.name} />

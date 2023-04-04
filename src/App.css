@@ -1,3 +1,8 @@
+:root {
+  --background-color: rgb(44, 44, 44);
+  --forground-color: white;
+  --title-color::#D6AD60;
+}
 h1{
   margin-top: 30px;
   color:#D6AD60;
@@ -7,12 +12,13 @@ h1{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content:center;
+  /* justify-content:center; */
   text-align: center;
   align-items: center;
   text-decoration: none;
   background-color: #F4EBD0 ;
-
+  height: 100%;
+  margin-bottom: 50px;
 }
 
 .navbar-row-line{
@@ -22,7 +28,8 @@ h1{
   justify-content:center;
   align-items:center;
   text-align:center;
-  margin-bottom:30px;
+  /* margin-bottom:30px; */
+
 }
 
 .navbar-row-line ul{
@@ -40,7 +47,11 @@ h1{
 }
 .card a:link {
   text-decoration: none;
-  color: #000;
+  color:var(--background-color);
+}
+a:link {
+  text-decoration: none;
+  color: var(--background-color);
 }
 .card{
   color: #122620;
@@ -53,7 +64,7 @@ h1{
   text-decoration: none;
 }
 .navbar-nav a {
-  color: #fff;
+  color: var(--forground-color);
 }
 
 .form-group input{
@@ -65,12 +76,49 @@ h1{
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  width: 30%;
-  margin: auto;
+  width: 25%;
+  /* margin: auto; */
   padding-top: 50px;
   color:#D6AD60;
 }
 
 .searchBar-input {
   width: 100%;
+}
+
+footer {
+  background-color: var(--background-color);
+  color: var(--forground-color);
+  flex-shrink: 0;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+}
+
+.content-container{
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  background-color: #F4EBD0 ;
+  height: 100vh;
+  margin-top: -70px;
+}
+
+.card{
+  border-radius: 15px;
+}
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px auto -20px auto;
 }
